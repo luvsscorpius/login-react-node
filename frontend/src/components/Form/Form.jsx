@@ -4,7 +4,7 @@ import * as C from './Styles'
 const Form = ({ theme }) => {
     return (
         <C.Main theme={theme}>
-            <C.Title theme={theme}>Olá Pequeno Gafanhoto</C.Title>
+            <C.Title theme={theme}>Olá Pequeno Gafanhoto!</C.Title>
 
             <C.Form theme={theme}>
                 <C.InputUsuario type="text" placeholder="Usuário" theme={theme} />

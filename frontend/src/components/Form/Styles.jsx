@@ -8,6 +8,10 @@ export const App = styled.div`
     align-items: center;
     flex-direction: column;
     background-color: ${(props) => (props.theme === 'dark' ? "#13111b" : "#fff")};
+
+    @media only screen and (max-width: 725px) {
+        width: 100%;
+    }
 `;
 
 export const Main = styled.div`
@@ -15,7 +19,11 @@ export const Main = styled.div`
     height: 400px;
     border-radius: 1.5rem;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-    background-color: ${(props) => (props.theme === 'dark' ? "#201b2d" : "#fff")}
+    background-color: ${(props) => (props.theme === 'dark' ? "#201b2d" : "#fff")};
+
+    @media only screen and (max-width: 725px) {
+        width: 100%;
+    }
 `;
 
 export const Title = styled.div`
@@ -55,6 +63,10 @@ export const InputUsuario = styled.input`
     &::placeholder {
         color: ${(props) => (props.theme === "dark" ? "rgb(254, 255, 255)" : "rgb(38, 50, 56)")};
     }
+
+    &:focus {
+        border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    }
 `;
 
 export const InputSenha = styled.input`
@@ -77,6 +89,10 @@ export const InputSenha = styled.input`
     &::placeholder {
         color: ${(props) => (props.theme === "dark" ? "rgb(254, 255, 255)" : "rgb(38, 50, 56)")};
     }
+
+    &:focus {
+        border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    }
 `;
 
 export const Submit = styled.a`
@@ -84,6 +100,7 @@ export const Submit = styled.a`
     border-radius: 5rem;
     color: #fff;
     background-color: #161A30;
+    text-decoration: none;
     width: 76%;
     height: 40px;
     display: flex;
@@ -93,7 +110,6 @@ export const Submit = styled.a`
 
 export const Forgot = styled.p`
     font-weight: 700;
-    color: #161A30;
     letter-spacing: 1px;
     margin-top: 20px;
 `;
@@ -101,5 +117,5 @@ export const Forgot = styled.p`
 export const A = styled.a`
     cursor: pointer;
     text-decoration: none;
-    color: #161A30;
+    color: ${(props) => (props.theme === "dark" ? "#fff" : "#161A30")};
 `
